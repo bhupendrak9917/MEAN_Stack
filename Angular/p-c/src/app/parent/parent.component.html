@@ -1,0 +1,17 @@
+<div style="text-align: center; margin-top: 50px;">
+    <h1>Parent Component</h1>
+    <input
+      type="text"
+      [(ngModel)]="parentMessage"
+      placeholder="Enter message for child"
+    />
+    <button>Send to Child</button>
+    <div *ngIf="childMessage">
+      <h3>Message from Child: {{ childMessage }}</h3>
+    </div>
+    <app-child
+      [messageFromParent]="parentMessage"
+      (messageToParent)="receiveFromChild($event)"
+    ></app-child>
+  </div>
+  

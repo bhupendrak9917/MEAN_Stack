@@ -1,0 +1,15 @@
+<div style="text-align: center; margin-top: 20px;">
+    <h1>Select a Color</h1>
+    <select (change)="onColorChange($event)">
+      <option value="">-- Choose a Color --</option>
+      <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+    </select>
+    <div
+      *ngIf="selectedColor"
+      [style.backgroundColor]="selectedColor"
+      style="width: 200px; height: 200px; margin: 20px auto; border: 1px solid black;"
+    >
+      <p style="color: white; line-height: 200px; font-weight: bold;">{{ selectedColor }}</p>
+    </div>
+  </div>
+  

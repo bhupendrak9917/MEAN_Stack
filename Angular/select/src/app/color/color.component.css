@@ -1,0 +1,10 @@
+select{
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+div p{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+}  

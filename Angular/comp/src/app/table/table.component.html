@@ -1,0 +1,17 @@
+<h2>Employee Details</h2>
+<table border="1" style="width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.eid }}</td>
+      <td>{{ emp.ename.toUpperCase() }}</td>
+      <td>Rs.{{ emp.esalary }}</td>
+    </tr>
+  </tbody>
+</table>

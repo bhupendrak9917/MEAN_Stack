@@ -1,0 +1,28 @@
+<h2>MCU Cast Details</h2>
+<table border="1" style="width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Character</th>
+      <th>Cast</th>
+      <th>Last Film</th>
+      <th>Upcoming Film</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cast of castData">
+      <td><a [routerLink]="['/cast', cast.sno]">{{ cast.sno }}</a></td>
+      <td>{{ cast.character }}</td>
+      <td>{{ cast.cast }}</td>
+      <td>{{ cast.lastfilm }}</td>
+      <td>{{ cast.upcomingfilm }}</td>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="selectedCast">
+  <h3>Cast Details</h3>
+  <p><strong>Character:</strong> {{ selectedCast.character }}</p>
+  <p><strong>Cast:</strong> {{ selectedCast.cast }}</p>
+  <p><strong>Last Film:</strong> {{ selectedCast.lastfilm }}</p>
+  <p><strong>Upcoming Film:</strong> {{ selectedCast.upcomingfilm }}</p>
+</div>

@@ -1,0 +1,22 @@
+$primary-color: null;
+$secondary-color: null;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: $secondary-color;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  

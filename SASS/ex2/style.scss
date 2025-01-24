@@ -1,0 +1,27 @@
+$theme: "dark";
+$background-color: null;
+$text-color: null;
+@if $theme == "dark" {
+  $background-color: #333;
+  $text-color: #fff;
+} @else if $theme == "light" {
+  $background-color: #f9f9f9;
+  $text-color: #333;
+}
+h1 {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 10px;
+}
+
+div {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 10px;
+}
+
+p {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 10px;
+}

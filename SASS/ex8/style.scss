@@ -1,0 +1,12 @@
+@function lighten-color($color) {
+    @return lighten($color, 20%);
+  }
+  .element {
+    $base-color: #3498db;
+    background-color: lighten-color($base-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+  }

@@ -1,0 +1,25 @@
+.color-style, .only-color, .layout-style {
+  color: #3498db;
+  background-color: #f0f0f0;
+}
+
+.font-style, .only-font, .layout-style {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.layout-style {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.only-color {
+  padding: 10px;
+}
+
+.only-font {
+  padding: 10px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+$button-font-size: 20px;
+$button-bg-color: #3498db;
+$button-hover-bg-color: #2980b9;
+$button-text-color: #ffffff;
+$button-padding: 10px 20px;
+$button-border-radius: 5px;
+.button {
+  font-size: $button-font-size;
+  color: $button-text-color;
+  background-color: $button-bg-color;
+  padding: $button-padding;
+  border: none;
+  border-radius: $button-border-radius;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+  }
+}

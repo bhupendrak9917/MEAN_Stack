@@ -1,0 +1,412 @@
+1.
+style.scss
+
+$button-font-size: 20px;
+$button-bg-color: #3498db;
+$button-hover-bg-color: #2980b9;
+$button-text-color: #ffffff;
+$button-padding: 10px 20px;
+$button-border-radius: 5px;
+.button {
+  font-size: $button-font-size;
+  color: $button-text-color;
+  background-color: $button-bg-color;
+  padding: $button-padding;
+  border: none;
+  border-radius: $button-border-radius;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-bg-color;
+  }
+}
+
+main.scss
+
+@import 'style';
+
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Button Example</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <button class="button">Click Me</button>
+</body>
+</html>
+
+2.
+style.scss
+
+$theme: "dark";
+$background-color: null;
+$text-color: null;
+@if $theme == "dark" {
+  $background-color: #333;
+  $text-color: #fff;
+} @else if $theme == "light" {
+  $background-color: #f9f9f9;
+  $text-color: #333;
+}
+h1 {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 10px;
+}
+
+div {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 10px;
+}
+
+p {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 10px;
+}
+
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conditional Styling Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Conditional Styling with SASS</h1>
+  <div>This is a div element.</div>
+  <p>This is a paragraph element.</p>
+</body>
+</html>
+
+3.
+style.scss
+
+$base-font-size: 10px;
+$i: 1;
+@while $i <= 6 {
+  h#{$i} {
+    font-size: $base-font-size * $i;
+  }
+  $i: $i + 1;
+}
+
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heading Font Sizes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+</body>
+</html>
+
+4. 
+button.scss
+.button-base {
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+  }
+  .button-primary {
+    @extend .button-base;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  .button-secondary {
+    @extend .button-base;
+    background-color: #6c757d;
+    color: #fff;
+    font-style: italic;
+  }
+
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Button Styles</title>
+  <link rel="stylesheet" href="buttons.css">
+</head>
+<body>
+  <button class="button-base">Click me</button>
+  <button class="button-primary">Primary Button</button>
+  <button class="button-secondary">Secondary Button</button>
+</body>
+</html>
+
+5.
+colors.scss
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #e74c3c;
+$text-color: #333;
+$background-color: #f9f9f9;
+
+fonts.scss
+
+$primary-font: 'Arial', sans-serif;
+$heading-font: 'Helvetica', sans-serif;
+$base-font-size: 16px;
+$heading-font-size: 24px;
+
+layouts.scss
+
+$primary-color: null;
+$secondary-color: null;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: $secondary-color;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+main.scss
+
+@import 'colors';
+@import 'fonts';
+@import 'layouts';
+body {
+  font-family: $primary-font;
+  font-size: $base-font-size;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SASS Modular Example</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Welcome to My Website</h1>
+    </header>
+    
+    <main>
+      <p>This is a simple page to demonstrate modular SASS files.</p>
+    </main>
+    
+    <footer class="footer">
+      <p>Footer Content Here</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+6.
+style.scss
+
+.color-style {
+    color: #3498db;
+    background-color: #f0f0f0;
+  }
+  .font-style {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .layout-style {
+    @extend .color-style;
+    @extend .font-style;
+  
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .only-color {
+    @extend .color-style;
+    padding: 10px;
+  }
+  .only-font {
+    @extend .font-style;
+    padding: 10px;
+  }
+  
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SCSS Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="only-color">
+    <p>This div only has color-related styling applied.</p>
+  </div>
+
+  <div class="only-font">
+    <p>This div only has font-related styling applied.</p>
+  </div>
+
+  <div class="layout-style">
+    <p>This div has both color, font, and layout-related styling applied.</p>
+  </div>
+</body>
+</html>
+
+7.
+style.scss
+
+@mixin button-style($bg-color, $text-color, $font-size, $padding) {
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: $font-size;
+    padding: $padding;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($bg-color, 10%);
+    }
+  }
+  .button-primary {
+    @include button-style(#3498db, #fff, 16px, 10px);
+  }
+  
+  .button-secondary {
+    @include button-style(#2ecc71, #fff, 14px, 8px);
+  }
+  
+  .button-danger {
+    @include button-style(#e74c3c, #fff, 18px, 12px);
+  }
+
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Button Mixin Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="button-primary">Primary Button</button>
+  <button class="button-secondary">Secondary Button</button>
+  <button class="button-danger">Danger Button</button>
+</body>
+</html>
+
+8.
+style.scss
+
+@function lighten-color($color) {
+    @return lighten($color, 20%);
+  }
+  .element {
+    $base-color: #3498db;
+    background-color: lighten-color($base-color);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lighten Color Function Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="element">
+    <p>This element has a lightened background color.</p>
+  </div>
+</body>
+</html>
+
+9.
+style.scss
+
+@function square($value) {
+    @return $value * $value;
+  }
+  .div-container {
+    $height: 10;
+    $width: 15;
+    height: square($height) + px;
+    width: square($width) + px;
+    font-size: square($width) / 10 + px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: square($height) + px;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+main.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SASS Function Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="div-container">
+    <p>This content is inside a square-sized div!</p>
+  </div>
+</body>
+</html>

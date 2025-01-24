@@ -1,0 +1,9 @@
+@import 'colors';
+@import 'fonts';
+@import 'layouts';
+body {
+  font-family: $primary-font;
+  font-size: $base-font-size;
+  color: $text-color;
+  background-color: $background-color;
+}

@@ -1,0 +1,26 @@
+@mixin button-style($bg-color, $text-color, $font-size, $padding) {
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: $font-size;
+    padding: $padding;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($bg-color, 10%);
+    }
+  }
+  .button-primary {
+    @include button-style(#3498db, #fff, 16px, 10px);
+  }
+  
+  .button-secondary {
+    @include button-style(#2ecc71, #fff, 14px, 8px);
+  }
+  
+  .button-danger {
+    @include button-style(#e74c3c, #fff, 18px, 12px);
+  }
+  

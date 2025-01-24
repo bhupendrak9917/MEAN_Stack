@@ -1,0 +1,30 @@
+Create a button with text Click Me where the size of the text should be 20px, the text should appear in the center and when the user takes
+the cursor on the button the backgroundcolor of the button must change
+ 
+Create a SASS file where a variable name is declared and initialized and based on condition change the background color and color of your h1,
+div and p tags neither of the tags are nested in html.
+ 
+Create a SASS file where a variable name is declared and initialized with a value, based on the while loop you must change the font-size of
+the tags h1 to h6.
+ 
+Create 3 buttons 
+1. .button-base (padding 10px, border, bgc,color) (Click me)
+2. .button - primary (bgc,color,fontweight) ( Primary Button) 
+3. .button -secondary (bgc,fontstyle) (all three are names of slelectors) (Secondary Button)
+
+Create a SASS Program where separate files are created for colors, fonts, and layouts. Use appropriate directive to combine them into one
+scss file and ensure that styles are applied perfectly accross the html file.
+
+Write two classes in SCSS which contains different styles like colors and font related stuff and both this classes to another class where
+layout related styling is added using appropriate directive and apply all this classes to different elements of html based on need to apply
+only color or color and font related styling all the stylings together
+ 
+Create a mixin for a button that accepts parameters for backgroundcolor, textcolor font-size and padding, apply it to multiple buttons with
+different values.
+ 
+Create a function that accepts a color and return its lightened version. Using this function in a backgroundcolor property for an html
+element.
+ 
+Write a function that accepts two numeric values as parameters (e.g. height and width) and it should return the square of the values.
+Use this function to apply the effect to the div tag and the content written inside that tag.
+ 

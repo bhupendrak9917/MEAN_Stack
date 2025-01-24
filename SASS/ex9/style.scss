@@ -1,0 +1,17 @@
+@function square($value) {
+    @return $value * $value;
+  }
+  .div-container {
+    $height: 10;
+    $width: 15;
+    height: square($height) + px;
+    width: square($width) + px;
+    font-size: square($width) / 10 + px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    line-height: square($height) + px;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  

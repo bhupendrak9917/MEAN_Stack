@@ -1,0 +1,8 @@
+$base-font-size: 10px;
+$i: 1;
+@while $i <= 6 {
+  h#{$i} {
+    font-size: $base-font-size * $i;
+  }
+  $i: $i + 1;
+}

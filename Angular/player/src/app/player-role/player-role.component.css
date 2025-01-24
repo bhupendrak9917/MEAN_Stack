@@ -1,0 +1,17 @@
+.wicketkeeper{
+    color: green;
+    font-weight: bold;
+}
+.captain{
+    color: red;
+    font-weight: bold;
+}  
+.batsman{
+    color: blue;
+}  
+.bowler{
+    color: orange;
+}
+.all-rounder{
+    color: black;
+}  

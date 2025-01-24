@@ -1,0 +1,14 @@
+<div style="text-align: center;">
+    <h1>Player List</h1>
+    <ul>
+      <li *ngFor="let player of players" [ngClass]="{
+          'wicketkeeper': player.role === 'Wicketkeeper',
+          'captain': player.role === 'Captain',
+          'batsman': player.role === 'Batsman',
+          'bowler': player.role === 'Bowler',
+          'all-rounder': player.role === 'All-rounder'
+        }">
+        {{ player.name }} - {{ player.role }}
+      </li>
+    </ul>
+</div>  

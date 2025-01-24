@@ -1,0 +1,20 @@
+<div style="text-align: center; margin-top: 20px;">
+    <h1>Book List</h1>
+    <table border="1" cellpadding="10" cellspacing="0" style="margin: 20px auto;">
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Book Name</th>
+          <th *ngIf="showCost">Book Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.bookId }}</td>
+          <td>{{ book.bookName }}</td>
+          <td *ngIf="showCost">Rs. {{ book.bookCost }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="toggleCost()">Show/Hide Cost</button>
+</div>  

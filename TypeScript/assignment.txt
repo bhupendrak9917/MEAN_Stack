@@ -1,0 +1,90 @@
+Ex - 1
+Define basic types for a Player. Include properties for:
+name (string)
+age (number)
+isCaptain (boolean, default to false)
+ 
+Ex-2
+Create a Player class with properties name, age, and isCaptain. Initialize the values of the said players in constructor of Player class.
+Add a method getPlayerInfo() that returns the player's details as a formatted string.
+
+Ex - 3
+ 
+Extend the Player class to create a Batsman class, adding properties runsScored and battingAverage.
+Override getPlayerInfo() to include batting stats in the output.
+ 
+Ex-4
+ 
+Define an interface IBowler with properties wicketsTaken and bowlingAverage. Ensure that a new class
+Bowler implements this interface and the Player class.
+ 
+Ex-5
+ 
+Place the Player, Batsman and Bowler classes in three different files and import them in one single
+file named CricketTeam, Export all the classes using default export, Create appropriate objects of the
+classes(Player,Batsaman and Bowler) in the CricketTeam file and call the appropriate methods from the
+respective classes. (you can take appropriate variables and methods in each class as per your wish)
+ 
+Ex - 6
+Create a Team class containing an array of Player objects. Add a method to add a Player to the team and
+a method to print the list of all players. Make sure to use private or protected access as appropriate
+for the array.
+ 
+Ex - 7
+ 
+Define a Person class with properties name and age. Create a method greet() that returns a greeting with
+the person’s name.Create a Student class that inherits from Person and adds a studentId property.
+Override greet() to include the studentId in the greeting.Add another class GraduateStudent that
+extends Student, with an additional property degree. Update the greeting to include the degree.
+Use the super keyword in the GraduateStudent class to call the Student class greet() method.
+ 
+Ex - 8
+Modify the Person class to make name a private property. Attempt to access it from outside the class.
+Change the age property in Person to protected. Access it from the Student class and observe the outcome.
+
+Ex - 9
+ 
+Define an interface Shape with a getArea() method. Implement this in classes Rectangle and Circle.Extend the Shape interface with 
+getPerimeter(). Update Rectangle and Circle to include it.
+ 
+Ex - 10
+ 
+Define an interface PersonInfo with name and age properties, and have the Person class implement it.Add an optional middleName 
+property to PersonInfo. Update the Person class to include it optionally.
+ 
+Ex -11
+ 
+Write an arrow function that accepts a number and an optional multiplier to return the product.
+ 
+Ex - 12
+ 
+Create a Stud class, write a method that uses an arrow function to print this.name in a setTimeout.
+ 
+Ex - 13
+Define an interface Account with username and password properties. Implement it in a class where username is public and password is private.
+
+Ex - 14
+ 
+Create a class Vehicle add a public method to the vehicle class, also add a private and protected method to the Vehicle class also add 
+a method named vehicleInfo() to the class , Create a class named Car which inherits the Vehicle class create a public method in the 
+car class and also override the vehicleInfo() in the Car class. Call all the method of both the classes by just making the object 
+of derived class Car.
+ 
+Ex - 15
+ 
+Create an interface named CricketInfo and add the properties named bdate,age,avg,sr,runs,wickets, year with specific datatypes as per 
+need, make sure that user can enter either string or number for years, should not be able to change the bdate and age, while avg and 
+sr should be optional while assigning the values in the object which the user creates implementing the interface and then assign the 
+values accordingly and display it.
+ 
+Ex - 16
+ 
+Create a Person class. Write a greet function with an optional name parameter.if name is not provided greet with "Hello, Everyone". 
+Add a method named Hobbies which has an opitonal parameter which is an array of the hobby, if provided list the hobbies. Add an optional 
+nickname parameter to the constructor of the Person class and add it to the greet function if provided.
+ 
+Ex - 17
+ 
+Create a file named myexport.ts with functions add, substract and export both the functions. Create another file named myexport1.ts with 
+functions sub and divide export both the functions, Reexport both the modules with all the functions in another file named myexp.ts and 
+import all the functions in a file named calc.ts and perform the operations importing all the functions using * in an appropriate way.

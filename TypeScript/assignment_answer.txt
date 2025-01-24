@@ -1,0 +1,424 @@
+1.
+
+type Player = {
+    name: string
+    age: number
+    isCaptain?: boolean
+}
+const player1: Player = {
+    name: "Tilak Verma",
+    age: 22,
+}
+player1.isCaptain = player1.isCaptain ?? false
+
+2 & 3.
+
+export class Players{
+    name: string
+    age: number
+    isCaptain: boolean
+    constructor(name: string, age: number, isCaptain: boolean){
+        this.name = name
+        this.age = age
+        this.isCaptain = isCaptain
+    }
+    getPlayerInfo(): string{
+        const captainStatus = this.isCaptain ? "Captain" : "Player"
+        return `Name: ${this.name}, Age: ${this.age}, Role: ${captainStatus}`
+    }
+}
+export class Batsman extends Players{
+    runsScored: number
+    battingAverage: number
+    constructor(name: string, age: number, isCaptain: boolean, runsScored: number, battingAverage: number) {
+        super(name, age, isCaptain)
+        this.runsScored = runsScored
+        this.battingAverage = battingAverage
+    }
+    getPlayerInfo(): string {
+        const baseInfo = super.getPlayerInfo()
+        return `${baseInfo}, Runs Scored: ${this.runsScored}, Batting Average: ${this.battingAverage}`
+    }
+}
+const players1 = new Players("Tilak Verma", 22, true)
+console.log(players1.getPlayerInfo())
+const players2 = new Players("Abhishek Sharma", 24, false)
+console.log(players2.getPlayerInfo())
+const batsman1 = new Batsman("Sanju Samson", 30, false, 510, 56.6)
+console.log(batsman1.getPlayerInfo())
+
+4.
+
+import { Players } from './ex2';
+export interface IBowler{
+    wicketsTaken: number;
+    bowlingAverage: number;
+}
+export class Bowler extends Players implements IBowler{
+    wicketsTaken: number;
+    bowlingAverage: number;
+    constructor(name: string, age: number, isCaptain: boolean, wicketsTaken: number, bowlingAverage: number){
+        super(name, age, isCaptain);
+        this.wicketsTaken = wicketsTaken;
+        this.bowlingAverage = bowlingAverage;
+    }
+    getPlayerInfo(): string{
+        const baseInfo = super.getPlayerInfo();
+        return `${baseInfo}, Wickets Taken: ${this.wicketsTaken}, Bowling Average: ${this.bowlingAverage}`;
+    }
+}
+const bowler1 = new Bowler("Bhuvaneshwar Kumar", 34, false, 294, 26.09)
+console.log(bowler1.getPlayerInfo())
+const bowler2 = new Bowler("Mohammed Shami", 34, false, 448, 26.06)
+console.log(bowler2.getPlayerInfo())
+const bowler3 = new Bowler("Jasprit Bumrah", 30, false, 411, 21.03)
+console.log(bowler3.getPlayerInfo())
+
+5.
+
+import { Players } from './ex2'
+import { Batsman } from './ex2'
+import { Bowler } from './ex4'
+
+const player4_1 = new Players("Ravi Bishnoi", 24, false)
+console.log(player4_1.getPlayerInfo())
+const batsman4_1 = new Batsman("Rohit Sharma", 37, true, 19367, 42.65)
+console.log(batsman4_1.getPlayerInfo())
+const bowler4_1 = new Bowler("Mohammed Siraj", 30, false, 165, 27.93)
+console.log(bowler4_1.getPlayerInfo())
+
+6.
+
+import { Players } from './ex2'
+import { Batsman } from './ex2'
+import { Bowler } from './ex4'
+export default class Team {
+    protected players: Players[]
+    constructor() {
+        this.players = []
+    }
+    addPlayer(player: Players): void {
+        this.players.push(player)
+    }
+    printPlayers(): void {
+        if (this.players.length === 0) {
+            console.log("No players in the team.")
+        } else {
+            console.log("Players in the team:")
+            this.players.forEach(player => {
+                console.log(player.getPlayerInfo())
+            })
+        }
+    }
+}
+const team = new Team()
+const player6_1 = new Players("Hardik Pandya", 31, false)
+const batsman6_1 = new Batsman("Surya Kumar Yadav", 34, true, 3351, 35.64)
+const bowler6_1 = new Bowler("Mohit Sharma", 36, false, 31, 32.90)
+team.addPlayer(player6_1)
+team.addPlayer(batsman6_1)
+team.addPlayer(bowler6_1)
+team.printPlayers()
+
+7.
+
+class Person{
+    name: string
+    age: number
+    constructor(name: string, age: number){
+        this.name = name
+        this.age = age
+    }
+    greet(): string{
+        return `Hello, my name is ${this.name}.`
+    }
+}
+class Student extends Person{
+    studentId: number
+    constructor(name: string, age: number, studentId: number){
+        super(name, age)
+        this.studentId = studentId
+    }
+    greet(): string{
+        return `${super.greet()} My student ID is ${this.studentId}.`
+    }
+}
+class GraduateStudent extends Student{
+    degree: string
+    constructor(name: string, age: number, studentId: number, degree: string){
+        super(name, age, studentId)
+        this.degree = degree
+    }
+    greet(): string{
+        return `${super.greet()} I have a degree in ${this.degree}.`
+    }
+}
+const person = new Person("Shankar", 21)
+console.log(person.greet())
+const student = new Student("Krishna", 23, 12345)
+console.log(student.greet())
+const graduateStudent = new GraduateStudent("Ram", 25, 67890, "Computer Science")
+console.log(graduateStudent.greet())
+
+8.
+
+class Person1{
+    private name: string
+    protected age: number
+    constructor(name: string, age: number){
+        this.name = name
+        this.age = age
+    }
+    greet(): string{
+        return `Hello, my name is ${this.name}.`
+    }
+}
+class Student1 extends Person1 {
+    studentId: number
+    constructor(name: string, age: number, studentId: number) {
+        super(name, age)
+        this.studentId = studentId
+    }
+    greet(): string {
+        return `${super.greet()} I am ${this.age} years old, and my student ID is ${this.studentId}.`
+    }
+}
+const person8_1 = new Person1("Ramesh", 24)
+console.log(person8_1.name)
+console.log(person8_1.age)
+const student8_1 = new Student1("Suresh", 23, 12345)
+console.log(student8_1.name)
+console.log(student8_1.age)
+console.log(student8_1.greet())
+
+9.
+
+interface Shape {
+    getArea(): number
+    getPerimeter(): number
+  }
+  class Rectangle implements Shape{
+    constructor(private width: number, private height: number) {}
+   
+    getArea(): number{
+      return this.width * this.height;
+    }
+    getPerimeter(): number{
+      return 2 * (this.width + this.height);
+    }
+}
+  class Circle implements Shape{
+    constructor(private radius: number) {}
+    getArea(): number{
+      return Math.PI * Math.pow(this.radius, 2)
+    }
+    getPerimeter(): number{
+      return 2 * Math.PI * this.radius
+    }
+}
+const rectangle = new Rectangle(15, 20)
+console.log(`Rectangle area: ${rectangle.getArea()}`)
+console.log(`Rectangle perimeter: ${rectangle.getPerimeter()}`)
+const circle = new Circle(20)
+console.log(`Circle radius: ${circle.getArea()}`)
+console.log(`Circle perimeter: ${circle.getPerimeter()}`)
+
+10.
+
+interface PersonInfo{
+    name: string
+    age: number
+    middleName?: string
+}
+class Person2 implements PersonInfo{
+    constructor(
+      public name: string,
+      public age: number,
+      public middleName?: string
+    ) {}
+}
+const person1 = new Person2("Rohit", 37, "Gurunath")
+console.log("Person 1:")
+console.log("Name:", person1.name)
+console.log("Age:", person1.age)
+console.log("Middle Name:", person1.middleName)
+const person2 = new Person2("Rajesh", 21)
+console.log("\nPerson 2:")
+console.log("Name:", person2.name)
+console.log("Age:", person2.age)
+
+11.
+
+const mul = (value: number, factor: number = 1): number => {
+    return value * factor
+}
+const obj1 = mul(5, 5);
+console.log("Multiplication Result 1:", obj1)
+ 
+const obj2 = mul(5);
+console.log("Multiplication Result 2:", obj2)
+
+12.
+
+class Student12{
+    constructor(public studentName: string){}
+    printStudent(){
+        setTimeout(() => {
+            console.log(this.studentName)
+        }, 1000)
+    }
+}
+const student1 = new Student12("Binod")
+student1.printStudent()
+
+13.
+
+interface login{
+    username: string
+    password: string
+}
+ 
+class acc implements login{
+    public username: string
+    public password: string
+    constructor(username: string, password: string){
+        this.username = username
+        this.password = password
+    }
+    public getPassword(): string{
+        return this.password
+    }
+}
+
+14.
+
+class Vehicle{
+    public startEngine(): void{
+        console.log("Engine started.")
+    }
+    private checkBattery(): void{
+        console.log("Battery is in good condition.")
+    }
+    protected fuelStatus(): void{
+        console.log("Fuel tank is full.")
+    }
+    public vehicleInfo(): void{
+        console.log("This is a generic vehicle.")
+        this.checkBattery()
+        this.fuelStatus()
+    }
+}
+class Car extends Vehicle {
+    public playMusic(): void {
+        console.log("Playing music.")
+    }
+    public vehicleInfo(): void {
+        console.log("This is a car.")
+        super.vehicleInfo()
+    }
+}
+const car1 = new Car()
+car1.startEngine()
+car1.playMusic()
+car1.vehicleInfo()
+
+15.
+
+interface CricketInfo{
+    readonly bdate: string
+    readonly age: number
+    avg?: number
+    sr?: number
+    runs: number
+    wickets: number
+    year: string | number
+}
+const playerInfo: CricketInfo ={
+    bdate: "1988-06-12",
+    age: 35,
+    runs: 6506,
+    wickets: 593,
+    year: 2024
+}
+console.log("Player Information:")
+console.log("Birthdate:", playerInfo.bdate)
+console.log("Age:", playerInfo.age)
+console.log("Runs:", playerInfo.runs)
+console.log("Wickets:", playerInfo.wickets)
+console.log("Year:", playerInfo.year)
+playerInfo.avg = 32.6
+playerInfo.sr = 69.08
+console.log("Average:", playerInfo.avg)
+console.log("Strike Rate:", playerInfo.sr)
+
+16.
+
+class Person16{
+    name: string
+    nickname?: string
+    constructor(name: string, nickname?: string){
+        this.name = name
+        this.nickname = nickname
+    }
+    greet(name?: string): void{
+        if (name) {
+            console.log(`Hello, ${name}!`)
+        } else if (this.nickname) {
+            console.log(`Hello, I'm ${this.nickname}!`)
+        } else {
+            console.log("Hello, Everyone!")
+        }
+    }
+    Hobbies(hobbies?: string[]): void{
+        if (hobbies && hobbies.length > 0) {
+            console.log("Hobbies:")
+            hobbies.forEach((hobby, index) =>{
+                console.log(`${index + 1}. ${hobby}`)
+            })
+        } else{
+            console.log("No hobbies provided.")
+        }
+    }
+}
+const person1 = new Person16("Ramesh", "Suresh")
+person1.greet()
+person1.greet("Kamlesh")
+person1.Hobbies(["Running", "Table Tennis", "Traveling"])
+const person2 = new Person16("Devesh")
+person2.greet()
+person2.Hobbies()
+
+17.
+myexport.ts
+
+export function add(a: number, b: number): number{
+    return a + b
+}
+export function subtract(a: number, b: number): number{
+    return a - b
+}
+
+myexport1.ts
+
+export function sub(a: number, b: number): number{
+    return a - b
+}
+export function divide(a: number, b: number): number{
+    if (b === 0) throw new Error("Cannot divide by zero")
+    return a / b
+}
+
+myexp.ts
+
+export * from './myexport'
+export * from './myexport1'
+
+calc.ts
+
+import * as calcFunctions from './myexp'
+const a = 10
+const b = 5
+console.log("Add:", calcFunctions.add(a, b))
+console.log("Subtract:", calcFunctions.subtract(a, b))
+console.log("Sub:", calcFunctions.sub(a, b))
+console.log("Divide:", calcFunctions.divide(a, b))

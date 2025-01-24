@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ex2_1 = require("./ex2");
+var ex2_2 = require("./ex2");
+var ex4_1 = require("./ex4");
+var player4_1 = new ex2_1.Players("Ravi Bishnoi", 24, false);
+console.log(player4_1.getPlayerInfo());
+var batsman4_1 = new ex2_2.Batsman("Rohit Sharma", 37, true, 19367, 42.65);
+console.log(batsman4_1.getPlayerInfo());
+var bowler4_1 = new ex4_1.Bowler("Mohammed Siraj", 30, false, 165, 27.93);
+console.log(bowler4_1.getPlayerInfo());

@@ -1,0 +1,25 @@
+<div style="text-align: center; margin-top: 20px;">
+    <button (click)="showTable()">Show Table</button>
+    <button (click)="hideTable()">Hide Table</button>
+  </div>
+  <div *ngIf="isTableVisible" style="margin: 20px;">
+    <table border="1" width="100%" style="border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Product Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let product of products"
+          appHover
+        >
+          <td>{{ product.pid }}</td>
+          <td>{{ product.pname }}</td>
+          <td>{{ product.prating }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>  

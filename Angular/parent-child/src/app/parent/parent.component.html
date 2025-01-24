@@ -1,0 +1,11 @@
+<div style="border: 1px solid black; padding: 10px;">
+    <h2>ParentComponent</h2>
+    <label for="eid">E-id:</label>
+    <input id="eid" type="text" [(ngModel)]="eid" /><br /><br />
+    <label for="ename">E-name:</label>
+    <input id="ename" type="text" [(ngModel)]="ename" /><br /><br />
+    <label for="ecity">E-city:</label>
+    <input id="ecity" type="text" [(ngModel)]="ecity" /><br /><br />
+    <button (click)="sendData()">Submit</button>
+    <app-child [employeeData]="employee"></app-child>
+  </div>  

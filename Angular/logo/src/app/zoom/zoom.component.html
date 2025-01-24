@@ -1,0 +1,15 @@
+<div style="text-align: center; margin-top: 20px;">
+    <h1>Angular Logo Zoom In/ Zoom Out</h1>
+    <img
+      src="../../assets/img/logo.jpg"
+      [style.width.px]="logoSize"
+      [style.height.px]="logoSize"
+      alt="Angular Logo"
+      style="border: 1px solid black;"
+    />
+    <div style="margin-top: 20px;">
+      <button (click)="zoomIn()" style="padding: 10px 20px; margin-right: 10px;">Zoom In</button>
+      <button (click)="zoomOut()" style="padding: 10px 20px;">Zoom Out</button>
+    </div>
+  </div>
+  

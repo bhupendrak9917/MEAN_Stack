@@ -1,0 +1,7 @@
+img{
+    transition: width 0.2s, height 0.2s;
+}
+button{
+    font-size: 16px;
+    cursor: pointer;
+}  

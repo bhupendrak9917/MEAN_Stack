@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Table with Active Rows and Columns</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h4 class="text-center">Table with Active Rows and Columns</h4>
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Item</th>
+          <th>Status</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <td>1</td>
+          <td>A</td>
+          <td>Active</td>
+          <td>This row is marked as active.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>B</td>
+          <td>Inactive</td>
+          <td>This item is inactive.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="table-active">C</td>
+          <td>Pending</td>
+          <td>This column cell 'Item' is marked as active.</td>
+        </tr>
+        <tr class="table-active">
+          <td>4</td>
+          <td>D</td>
+          <td>Complete</td>
+          <td>This row is marked as active.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>E</td>
+          <td class="table-active">Review</td>
+          <td>This cell in the 'Status' column is marked as active rest is inactive.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

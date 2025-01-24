@@ -1,0 +1,14 @@
+Bootstrap
+
+1. Create a bootstrap layout with text aligned to the left, right and center using Bootstrap utility classes.
+2. Create a bootstrap layout which display heading with better font-size and lighter font weight using the proper utility class of bootstrap.
+3. Experiment with different text colors provided by bootstrap utility classes and apply them to headings or paragraphs.
+4. Apply different font weights, styles, mark etc to text elements using bootstrap utility classes.
+5. Utilize bootstrap utility classes to transform text to uppercase, lowercase and capitalize.
+
+1. Build a Bootstrap table with contextual classes for rows based on certain conditions like (success, primary, danger, warning, light, dark, info, secondary)
+2. Implement a Bootstrap table with hover effect on rows
+3. Build a Bootstrap table with active rows and columns
+4. Create a simple bootstrap table
+5. Create a bootstrap table with striped rows.
+6. Create bootstrap tables with border and border less tables as well also provide red border for the table

@@ -1,0 +1,19 @@
+<div class="table-container">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ProductId</th>
+          <th>ProductName</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products" [style.backgroundColor]="product.quantity | color">
+          <td>{{ product.productId }}</td>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

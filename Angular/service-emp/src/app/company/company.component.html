@@ -1,0 +1,19 @@
+<h2>Company Details</h2>
+<table border="1" cellspacing="0" cellpadding="5" style="width: 100%">
+  <thead>
+    <tr>
+      <th>CompID</th>
+      <th>CompName</th>
+      <th>CompProfit</th>
+      <th>CompLocation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let company of companies">
+      <td>{{ company.compId }}</td>
+      <td>{{ company.compName }}</td>
+      <td>{{ company.compProfit }}</td>
+      <td>{{ company.compLocation }}</td>
+    </tr>
+  </tbody>
+</table>

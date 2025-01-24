@@ -1,0 +1,6 @@
+<div>
+    <h1>Two Way Data Binding</h1>
+    <input type="text" [(ngModel)]="name" placeholder="Type your name here" />
+    <h2 *ngIf="name">Konichiwa, {{ name }} san!</h2>
+    <h2 *ngIf="!name"></h2>
+</div>

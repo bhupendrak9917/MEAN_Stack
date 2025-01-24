@@ -1,0 +1,28 @@
+<div style="text-align: center; margin-top: 50px;">
+    <h1>ScoreCard</h1>
+    <div>
+      <label for="teamName">Team Name:</label>
+      <input
+        type="text"
+        id="teamName"
+        [(ngModel)]="teamName"
+        placeholder="Enter team name"
+      />
+    </div>
+    <div style="margin-top: 10px;">
+      <label for="teamScore">Team Score:</label>
+      <input
+        type="number"
+        id="teamScore"
+        [value]="teamScore"
+        (input)="updateScore($event)"
+        placeholder="Enter team score"
+      />
+    </div>
+    <div style="margin-top: 20px;">
+      <h2 *ngIf="teamName">Team: {{ teamName }}</h2>
+      <h2 *ngIf="teamScore !== null">Score: {{ teamScore }}</h2>
+      <h2 *ngIf="!teamName && teamScore === null">Enter details above!</h2>
+    </div>
+  </div>
+  
